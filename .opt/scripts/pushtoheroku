@@ -1,0 +1,22 @@
+#!/bin/bash
+
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+if [ $# -ne 1 ]
+then
+  echo "$me app_name"
+  exit 1
+fi
+
+branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+branch_name="(unnamed branch)"     # detached HEAD
+branch_name=${branch_name##refs/heads/}
+if [ "(unnamed branch)" == "$branch_name" ]
+then
+  echo "Could not determine branch"
+  exit 2
+fi
+
+app_name="$1"
+
+echo git push "$app_name" $branch_name:master --force
+git push "$app_name" $branch_name:master --force

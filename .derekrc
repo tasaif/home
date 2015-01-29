@@ -64,3 +64,4 @@ alias gh='git hist '
 alias gm='git merge '
 alias gf='git fetch '
 alias omgdb='rake db:drop db:create db:migrate && rake db:seed'
+export PATH=~/.opt/scripts:$PATH

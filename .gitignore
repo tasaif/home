@@ -1,5 +1,6 @@
-*
-!.gitignore
-!.opt
-!.derekrc
-!.vimrc
+/*
+/*/
+!/.gitignore
+!/.opt/
+!/.derekrc
+!/.vimrc

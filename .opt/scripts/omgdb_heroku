@@ -1,0 +1,16 @@
+#!/bin/bash
+
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+if [ $# -ne 1 ];
+then
+  echo "$me app_name";
+  exit 1;
+fi
+
+app_name="$1"
+echo $app_name
+
+heroku pg:reset DATABASE_URL -a "$app_name" --confirm "$app_name"
+heroku run rake db:migrate -a "$app_name"
+heroku run rake db:seed -a "$app_name"
+heroku restart -a "$app_name"

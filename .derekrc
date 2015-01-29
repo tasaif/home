@@ -1,3 +1,4 @@
+#!/bin/bash
 # see: http://stufftohelpyouout.blogspot.com/2010/01/show-name-of-git-branch-in-prompt.html
 # see also: http://superuser.com/questions/31744/how-to-get-git-completion-bash-to-work-on-mac-os-x
 # see also: http://stackoverflow.com/questions/347901/what-are-your-favorite-git-features-or-tricks
@@ -64,4 +65,14 @@ alias gh='git hist '
 alias gm='git merge '
 alias gf='git fetch '
 alias omgdb='rake db:drop db:create db:migrate && rake db:seed'
+alias today='date +%y%m%d'
+
 export PATH=~/.opt/scripts:$PATH
+export PATH=~/.opt/bin:$PATH
+export EDITOR=vim
+export PYENV_ROOT="${HOME}/.pyenv"
+
+if [ -d "${PYENV_ROOT}" ]; then
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+  eval "$(pyenv init -)"
+fi

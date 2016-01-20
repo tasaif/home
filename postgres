@@ -1,0 +1,2 @@
+create role myapp with createdb login
+apt-get install postgresql postgres-server-dev-all

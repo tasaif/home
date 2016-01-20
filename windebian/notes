@@ -1,0 +1,18 @@
+Automount windows partition
+  `blkid` to get the uuid
+  /etc/fstab
+    UUID=22B2CCEFB2CCC88D /media/22B2CCEFB2CCC88D ntfsrw02
+  /etc/environment
+    WINDOWS=/media/22B2CCEFB2CCC88D/
+
+  https://extensions.gnome.org/extension/358/activities-configurator/
+    disable hot corner
+    set start icon
+
+  alacarte
+    Google Chrome
+      /usr/bin/google-chrome-stable --user-data-dir=/media/22B2CCEFB2CCC88D/Users/tasaif/AppData/Local/Google/Chrome/User\ Data/ %U
+    alt+F2>r restart gnome
+
+  symlink downloads, documents, pictures folder
+    ln -s /media/22B2CCEFB2CCC88D/Users/tasaif/Downloads/ /home/tasaif/Downloads

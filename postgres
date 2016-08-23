@@ -1,2 +1,3 @@
-create role myapp with createdb login
 apt-get install postgresql postgres-server-dev-all postgresql-server-dev-all
+create role tasaif with createdb login
+create database tasaif owner tasaif

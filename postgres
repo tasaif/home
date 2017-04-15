@@ -1,4 +1,9 @@
+# Debian
 apt-get install postgresql postgres-server-dev-all postgresql-server-dev-all
+
+# Ubuntu
+apt-get install postgresql-server-dev-all
+
 create role tasaif with createdb login
 create database tasaif owner tasaif
 alter role mpsg_support with password 'foobar'

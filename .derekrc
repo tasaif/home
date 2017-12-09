@@ -67,6 +67,7 @@ alias gf='git fetch '
 alias omgdb='rake db:drop db:create db:migrate && rake db:seed'
 alias today='date +%y%m%d'
 alias please='sudo $(history -p !!)'
+alias doe='cat /opt/lbl/icusw/dw_property/property_number'
 
 export PATH=~/.opt/scripts:$PATH
 export PATH=~/.opt/bin:$PATH

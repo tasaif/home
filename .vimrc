@@ -19,4 +19,3 @@ set ai
 set expandtab
 set nu
 set backspace=indent,eol,start
-set relativenumber

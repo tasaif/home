@@ -11,3 +11,4 @@
 !/configure_mac.sh
 !/configure_linux.sh
 !/.screenrc
+!/.ssh
